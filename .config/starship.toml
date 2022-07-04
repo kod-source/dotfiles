@@ -1,0 +1,13 @@
+dd_newline = false
+
+[character]
+success_symbol = "🙆‍♂️"
+error_symbol = "🙅‍♀️"
+
+[directory]
+truncation_length = 0
+truncate_to_repo = false
+
+[time]
+disabled = false
+
