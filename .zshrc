@@ -83,3 +83,4 @@ if [[ $- =~ .*i.* ]]; then bind '"\C-xk": "\C-a hstr -k \C-j"'; fi
 
 . ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
+[ -f ~/.alias.zsh ] && source ~/.alias.zsh
