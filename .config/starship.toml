@@ -10,4 +10,23 @@ truncate_to_repo = false
 
 [time]
 disabled = false
+use_12hr = true
 
+[git_branch]
+style = "green"
+symbol = " "
+truncation_symbol = ""
+ignore_branches = ["master", "main"]
+
+[git_status]
+conflicted = "🏳"
+ahead = "🏎💨"
+behind = "😰"
+diverged = "😵"
+up_to_date = "✓"
+untracked = "🤷"
+stashed = "📦"
+modified = "📝"
+staged = '[++\($count\)](green)'
+renamed = "👅"
+deleted = "🗑"
