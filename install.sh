@@ -27,5 +27,8 @@ chsh -s /opt/homebrew/bin/fish
 # iTerm2
 ./iterm2/setup.sh
 
+# Rectangle
+./rectangle/setup.sh
+
 # Mac Setup
 ./mac/setup.sh
