@@ -2,7 +2,6 @@
   "workbench.startupEditor": "newUntitledFile",
   "files.autoSave": "afterDelay",
   "editor.wordWrap": "on",
-  "editor.fontFamily": "Ricty Diminished",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.codeActionsOnSave": null,
   "editor.formatOnSave": true,
@@ -18,5 +17,36 @@
   "[go]": {
     "editor.defaultFormatter": "golang.go"
   },
-  "go.toolsManagement.autoUpdate": true
+  "go.toolsManagement.autoUpdate": true,
+  "yaml.customTags": [
+    "!And",
+    "!And sequence",
+    "!If",
+    "!If sequence",
+    "!Not",
+    "!Not sequence",
+    "!Equals",
+    "!Equals sequence",
+    "!Or",
+    "!Or sequence",
+    "!FindInMap",
+    "!FindInMap sequence",
+    "!Base64",
+    "!Join",
+    "!Join sequence",
+    "!Cidr",
+    "!Ref",
+    "!Sub",
+    "!Sub sequence",
+    "!GetAtt",
+    "!GetAZs",
+    "!ImportValue",
+    "!ImportValue sequence",
+    "!Select",
+    "!Select sequence",
+    "!Split",
+    "!Split sequence"
+  ],
+  "yaml.validate": false,
+  "files.insertFinalNewline": true
 }

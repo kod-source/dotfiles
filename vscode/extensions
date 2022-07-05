@@ -13,7 +13,9 @@ ecmel.vscode-html-css
 EditorConfig.EditorConfig
 esbenp.prettier-vscode
 golang.go
+hediet.vscode-drawio
 Hridoy.rails-snippets
+kddejong.vscode-cfn-lint
 mgmcdermott.vscode-language-babel
 mikestead.dotenv
 mosapride.zenkaku
@@ -25,6 +27,7 @@ ms-toolsai.jupyter
 ms-toolsai.jupyter-keymap
 ms-toolsai.jupyter-renderers
 ms-vscode-remote.remote-containers
+ms-vscode.makefile-tools
 ms-vsliveshare.vsliveshare
 oderwat.indent-rainbow
 onecentlin.laravel-blade
@@ -34,9 +37,11 @@ PKief.material-icon-theme
 pranaygp.vscode-css-peek
 Prisma.prisma
 rebornix.ruby
+redhat.vscode-yaml
 shardulm94.trailing-spaces
 sianglim.slim
 streetsidesoftware.code-spell-checker
+timonwong.shellcheck
 vscodevim.vim
 wingrunr21.vscode-ruby
 wix.vscode-import-cost
