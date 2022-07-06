@@ -1,5 +1,14 @@
 #!/bin/bash
 
+for i in "$@"; do
+    case "$i" in
+        -s|--skip-apps)
+            skip_apps=1
+            shift ;;
+        *) ;;
+    esac
+done
+
 if [ ! -d ~/dotfiles ]; then
     cd ~
     git clone https://github.com/kod-source/dotfiles.git
@@ -16,7 +25,9 @@ if [ ! -f /opt/homebrew/bin/brew ]; then
 fi
 
 # Brewfileの実行
-brew bundle -v --file ~/dotfiles/Brewfile
+if [ ! "$skip_apps" ]; then
+    brew bundle -v --file ~/dotfiles/Brewfile
+fi
 
 
 # zsh-autosuggestionsのインストール
