@@ -1,5 +1,11 @@
 #!/bin/bash
 
+if [ ! -d ~/dotfiles ]; then
+    cd ~
+    git clone https://github.com/kod-source/dotfiles.git
+    cd dotfiles
+fi
+
 for f in .??*; do
     [ "$f" = ".git" ] && continue
 	ln -s ~/dotfiles/"$f" ~/"$f"
