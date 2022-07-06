@@ -1,62 +1,75 @@
-# tap
-tap "homebrew/bundle"
-tap "homebrew/core"
-tap "homebrew/cask"
-tap "homebrew/cask-fonts"
-tap "homebrew/cask-drivers"
+# Dock
+## Dockからすべてのアプリを消す
+defaults write com.apple.dock persistent-apps -array
+## Dockのサイズ
+defaults write com.apple.dock "tilesize" -int "36"
+## 最近起動したアプリを非表示
+defaults write com.apple.dock "show-recents" -bool "false"
+## アプリをしまうときのアニメーション
+defaults write com.apple.dock "mineffect" -string "scale"
+## 使用状況に基づいてデスクトップの順番を入れ替え
+defaults write com.apple.dock "mru-spaces" -bool "false"
 
-cask_args appdir: "/Applications"
+# Finder
+## 拡張子まで表示
+defaults write NSGlobalDomain "AppleShowAllExtensions" -bool "true"
+## 隠しファイルを表示
+defaults write com.apple.Finder "AppleShowAllFiles" -bool "true"
+## パスバーを表示
+defaults write com.apple.finder ShowPathbar -bool "true"
 
-# brew
-brew "act"
-brew "asdf"
-brew "bat"
-brew "curl"
-brew "exa"
-brew "fzf"
-brew "gh"
-brew "go"
-brew "golang-migrate"
-brew "jq"
-brew "mas"
-brew "minikube"
-brew "mysql"
-brew "neovim"
-brew "postgresql"
-brew "rsync"
-brew "starship"
-brew "tmux"
-brew "vim"
-brew "wget"
-brew "yq"
-brew "zoxide"
-brew "stow"
-brew "yarn"
-brew "fish"
-brew "nodebrew"
-brew "pipenv"
-brew "rbenv"
-brew "hstr"
+# Feedback
+## フィードバックを送信しない
+defaults write com.apple.appleseed.FeedbackAssistant "Autogather" -bool "false"
+## クラッシュレポート無効化
+defaults write com.apple.CrashReporter DialogType -string "none"
 
-# cask
-cask "1password"
-cask "alfred"
-cask "deepl"
-cask "discord"
-cask "docker"
-cask "drawio"
-cask "google-chrome"
-cask "google-japanese-ime"
-cask "iterm2"
-cask "notion"
-cask "postman"
-cask "slack"
-cask "visual-studio-code"
-cask "zoom"
-cask "kensington-trackball-works"
-cask "logitech-options"
-cask "karabiner-elements"
-cask "clipy"
-cask "rectangle"
-cask "monitorcontrol"
-cask "font-fira-code"
+# .DS_Store
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool "true"
+defaults write com.apple.desktopservices DSDontWriteUSBStores -bool "true"
+
+# Battery
+## バッテリーを%表示
+defaults write com.apple.menuextra.battery ShowPercent -string "YES"
+
+# Trackpad
+## タップでクリック
+defaults write com.apple.AppleMultitouchTrackpad Clicking -bool "true"
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool "true"
+defaults -currentHost write -g com.apple.mouse.tapBehavior -bool "true"
+## 軌跡の速さ
+defaults write -g com.apple.trackpad.scaling 3
+
+# Mouse
+## 軌跡の速さ
+defaults write -g com.apple.mouse.scaling 3
+## スクロールの速さ
+defaults write -g com.apple.scrollwheel.scaling 5
+
+# Keyboard
+## キーのリピート速度
+defaults write NSGlobalDomain KeyRepeat -int 2
+## キーのリピート認識時間
+defaults write NSGlobalDomain InitialKeyRepeat -int 15
+## フルキーボードアクセスを有効化
+defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
+## 本体キーボードのCapsLockキーの動作をControlにリマップ
+keyboard_id="$(ioreg -c AppleEmbeddedKeyboard -r | grep -Eiw "VendorID|ProductID" | awk '{ print $4 }' | paste -s -d'-\n' -)-0"
+defaults -currentHost write -g com.apple.keyboard.modifiermapping.${keyboard_id} -array-add "
+<dict>
+  <key>HIDKeyboardModifierMappingDst</key>\
+	    <integer>30064771300</integer>\
+	      <key>HIDKeyboardModifierMappingSrc</key>\
+	        <integer>30064771129</integer>\
+		</dict>
+  "
+
+# Security
+## ファイアウォールon
+sudo defaults write /Library/Preferences/com.Apple.alf globalstate -int 1
+
+# Others
+## GoogleのパブリックDNSを使用する
+networksetup -setdnsservers Wi-Fi 2001:4860:4860::8844 2001:4860:4860::8888 8.8.4.4 8.8.8.8
+## 自動で頭文字を大文字にしない
+defaults write NSGlobalDomain NSAutomaticCapitalizationEnabled -bool "false"
