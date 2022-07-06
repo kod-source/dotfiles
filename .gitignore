@@ -1,0 +1,5 @@
+.DS_Store
+.config/fish/fish_variables
+.config/karabiner/automatic_backups/
+.config/iterm2/
+.config/yarn/
