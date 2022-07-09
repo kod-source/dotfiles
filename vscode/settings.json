@@ -1,23 +1,15 @@
 {
   "workbench.startupEditor": "newUntitledFile",
-  "files.autoSave": "afterDelay",
-  "editor.wordWrap": "on",
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.codeActionsOnSave": null,
-  "editor.formatOnSave": true,
-  "workbench.editorAssociations": {
-    "*.ipynb": "jupyter.notebook.ipynb"
-  },
-  "terminal.integrated.inheritEnv": false,
   "typescript.updateImportsOnFileMove.enabled": "always",
-  "prettier.singleQuote": true,
-  "prettier.jsxSingleQuote": true,
-  "workbench.iconTheme": "material-icon-theme",
-  "go.formatTool": "gofmt",
+  "editor.accessibilitySupport": "off",
+  "editor.wordWrap": "on",
+  "editor.codeActionsOnSave": null,
   "[go]": {
     "editor.defaultFormatter": "golang.go"
   },
   "go.toolsManagement.autoUpdate": true,
+  "prettier.singleQuote": true,
+  "files.insertFinalNewline": true,
   "yaml.customTags": [
     "!And",
     "!And sequence",
@@ -47,6 +39,18 @@
     "!Split",
     "!Split sequence"
   ],
+  "prettier.jsxSingleQuote": true,
+  "terminal.integrated.inheritEnv": false,
+  "go.formatTool": "gofmt",
   "yaml.validate": false,
-  "files.insertFinalNewline": true
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter.notebook.ipynb"
+  },
+  "workbench.iconTheme": "material-icon-theme",
+  "files.autoSave": "afterDelay",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "terminal.integrated.env.osx": {
+    "FIG_NEW_SESSION": "1"
+  }
 }
