@@ -40,6 +40,7 @@ brew "peco"
 brew "pipenv"
 brew "rbenv"
 brew "hstr"
+brew "fig"
 
 # cask
 cask "1password"

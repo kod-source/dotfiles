@@ -1,4 +1,4 @@
-dd_newline = false
+add_newline = false
 
 [character]
 success_symbol = "🙆‍♂️"
