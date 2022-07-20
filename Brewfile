@@ -41,6 +41,7 @@ brew "pipenv"
 brew "rbenv"
 brew "hstr"
 brew "fig"
+brew "dive"
 
 # cask
 cask "1password"
