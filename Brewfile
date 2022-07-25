@@ -42,6 +42,8 @@ brew "rbenv"
 brew "hstr"
 brew "fig"
 brew "dive"
+brew "kayac/tap/ecspresso"
+brew "awscli"
 
 # cask
 cask "1password"
