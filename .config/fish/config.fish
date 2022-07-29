@@ -3,6 +3,7 @@ set -U FZF_LEGACY_KEYBINDINGS 0
 set -U FZF_REVERSE_ISEARCH_OPTS "--reverse --height=100%"
 set -x GOPATH $HOME/go
 set -x PATH $PATH $GOPATH/bin
+set -x PATH $HOME/.nodebrew/current/bin $PATH
 
 if status is-interactive
 # Commands to run in interactive sessions can go here
