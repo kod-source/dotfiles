@@ -22,3 +22,8 @@ alias gds='git diff --staged'
 alias cl='clear'
 alias ll='ls -l'
 alias la='ls -al'
+
+# dokcer
+alias d='docker'
+alias dc='docker compose'
+alias d-c='docker-compose'
