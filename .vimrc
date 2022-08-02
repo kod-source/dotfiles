@@ -11,3 +11,8 @@ nnoremap s><C-w>>
 nnoremap s<<C-w><
 nnoremap s+<C-w>+
 nnoremap s-<C-w>-
+
+" insertモードでのキー変更
+inoremap <C-k> <C-[>ld$A
+inoremap <C-a> <C-[>I
+inoremap <C-e> <C-[>A
