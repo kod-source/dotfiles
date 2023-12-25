@@ -1,0 +1,101 @@
+{
+  "[go]": {
+    "editor.defaultFormatter": "golang.go"
+  },
+  "editor.accessibilitySupport": "off",
+  "editor.codeActionsOnSave": null,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.wordWrap": "on",
+  "files.autoSave": "afterDelay",
+  "files.insertFinalNewline": true,
+  "go.formatTool": "gofmt",
+  "go.toolsManagement.autoUpdate": true,
+  "terminal.integrated.env.osx": {
+    "FIG_NEW_SESSION": "1"
+  },
+  "terminal.integrated.inheritEnv": false,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "vim.vimrc.enable": true,
+  "vim.vimrc.path": "~/.vimrc",
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter.notebook.ipynb"
+  },
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.startupEditor": "newUntitledFile",
+  "yaml.customTags": [
+    "!And",
+    "!And sequence",
+    "!If",
+    "!If sequence",
+    "!Not",
+    "!Not sequence",
+    "!Equals",
+    "!Equals sequence",
+    "!Or",
+    "!Or sequence",
+    "!FindInMap",
+    "!FindInMap sequence",
+    "!Base64",
+    "!Join",
+    "!Join sequence",
+    "!Cidr",
+    "!Ref",
+    "!Sub",
+    "!Sub sequence",
+    "!GetAtt",
+    "!GetAZs",
+    "!ImportValue",
+    "!ImportValue sequence",
+    "!Select",
+    "!Select sequence",
+    "!Split",
+    "!Split sequence"
+  ],
+  "yaml.validate": false,
+  "explorer.confirmDelete": false,
+  "githubPullRequests.pullBranch": "never",
+  "[python]": {
+    "editor.formatOnType": true
+  },
+  "terminal.integrated.fontFamily": "CodeNewRoman Nerd Font",
+  "CodeGPT.query.language": "Japanese",
+  "chatgpt.gpt3.apiKey": "op://Private/ChatGPT/add more/API_KEY",
+  "chatgpt.promptPrefix.addComments": "次のコードにコメントを追加してください",
+  "chatgpt.promptPrefix.addTests": "次のコードに対するテストを実装してください",
+  "chatgpt.promptPrefix.findProblems": "次のコードの問題点を見つけてください",
+  "chatgpt.promptPrefix.optimize": "次のコードを最適化してください",
+  "chatgpt.promptPrefix.explain": "次のコードを説明してください",
+  "chatgpt.promptPrefix.customPrompt1-enabled": true,
+  "chatgpt.promptPrefix.customPrompt1": "次のコメントを満たすメソッド名や変数名の候補をたくさん出してください",
+  "chatgpt.method": "Browser Auto-login",
+  "editor.unicodeHighlight.ambiguousCharacters": false,
+  "go.testEnvFile": "${workspaceFolder}/.env",
+  "editor.inlineSuggest.enabled": true,
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false
+  },
+  "eslint.workingDirectories": ["functions"],
+  "[terraform]": {
+    "editor.defaultFormatter": "hashicorp.terraform",
+    "editofr.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.formatAll.terraform": true
+    }
+  },
+  "[terraform-vars]": {
+    "editor.defaultFormatter": "hashicorp.terraform",
+    "editor.formatOnSave": false,
+    "editor.codeActionsOnSave": {
+      "source.formatAll.terraform": true
+    }
+  },
+  "[terraform][terraform-vars]": {
+    "editor.codeActionsOnSave": {
+      "source.formatAll.terraform": "explicit"
+    }
+  }
+}
