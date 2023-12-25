@@ -2,4 +2,4 @@
 set -eu
 
 bin/init.sh
-bin/mitamae local "base" lib/recipe.rb
+bin/mitamae local "$@" lib/recipe.rb
