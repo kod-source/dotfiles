@@ -14,6 +14,10 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
       # Runs a single command using the runners shell
+      - name: submodule
+        run: |
+          git submodule init
+          git submodule update
       - name: Set MacOS.
         run: ROLE=base ./install.sh
 
@@ -27,5 +31,9 @@ jobs:
           apt-get update
           apt-get install -y sudo
           sudo apt-get install -y build-essential procps curl file git make
+      - name: submodule
+        run: |
+          git submodule init
+          git submodule update
       - name: Install dotfiles
         run: ROLE=base ./install.sh
