@@ -1,9 +1,5 @@
 darwin_app 'visual-studio-code'
 
-directory "#{ENV['HOME']}/Library/Application\ Support/Code/user" do
-  recursive true
-end
-
 template "#{ENV['HOME']}/Library/Application\ Support/Code/user/settings.json" do
   source "templates/settings.json"
 end
