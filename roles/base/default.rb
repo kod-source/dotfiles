@@ -1,10 +1,10 @@
 include_cookbook 'functions'
+include_cookbook 'homebrew'
 
 include_cookbook 'cask'
 include_cookbook 'tap'
 
 
-include_cookbook 'homebrew'
 include_cookbook 'tmux'
 include_cookbook 'zsh'
 include_cookbook 'git'
@@ -21,6 +21,7 @@ include_cookbook 'karabiner'
 include_cookbook 'rectangle'
 include_cookbook 'gh'
 include_cookbook 'iterm2'
+include_cookbook 'alfred'
 
 tap 'homebrew/bundle'
 tap 'homebrew/core'
@@ -103,7 +104,6 @@ package 'sqldef/sqldef/mysqldef'
 darwin_app 'figma'
 darwin_app 'docker'
 darwin_app '1password'
-darwin_app 'alfred'
 darwin_app 'google-chrome'
 darwin_app 'google-japanese-ime'
 darwin_app 'slack'

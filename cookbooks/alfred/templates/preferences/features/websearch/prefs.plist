@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>customSites</key>
+	<dict>
+		<key>359782D6-4A38-4C43-839D-2D245251B81D</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>githubfuller</string>
+			<key>text</key>
+			<string>Search fuller git hub repository `{query}`</string>
+			<key>url</key>
+			<string>https://github.com/search?q=user%3Afuller-inc+{query}</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+		<key>528ED0D5-0E23-4243-802D-B1C077DC9755</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>githubmy</string>
+			<key>text</key>
+			<string>Search my git hub repository `{query}`</string>
+			<key>url</key>
+			<string>https://github.com/search?q=user%3Akod-source+{query}</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+		<key>6F85EC16-31E3-4B3D-8EDB-8489F2E00AA1</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>tailwind</string>
+			<key>text</key>
+			<string>Tailwnd CSS for '{query}'</string>
+			<key>url</key>
+			<string>https://tailwindcss.com/docs/{query}</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+		<key>D61E3EC0-9CCF-41B8-B071-CD87B2187D2B</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>githuball</string>
+			<key>text</key>
+			<string>Search All Git Hub Repository `{query}`</string>
+			<key>url</key>
+			<string>https://github.com/search?q={query}</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+		<key>E4A1BEB1-94BF-41A0-8EBF-F606FAB2F0C0</key>
+		<dict>
+			<key>enabled</key>
+			<true/>
+			<key>keyword</key>
+			<string>ama</string>
+			<key>text</key>
+			<string>amazon Jpan for '{query}'</string>
+			<key>url</key>
+			<string>https://www.amazon.co.jp/s?k={query}</string>
+			<key>utf8</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
