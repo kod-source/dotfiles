@@ -22,5 +22,5 @@ template "#{ENV['HOME']}/.zshrc" do
 end
 
 template "#{ENV['HOME']}/.alias.zsh" do
-  source "templates/.alias.zh"
+  source "templates/.alias.sh"
 end

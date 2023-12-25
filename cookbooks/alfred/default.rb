@@ -12,5 +12,3 @@ Dir.glob(File.expand_path('templates/**/*')).each do |src_file|
         source src_file
     end
 end
-
-~/Library/Application\ Support/Alfred
