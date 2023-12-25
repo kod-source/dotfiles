@@ -1,0 +1,459 @@
+{
+    "title": "Macをvimのように使うため用に使うためのショートカット",
+    "rules": [
+        {
+            "description": "caps_lockをコントールに変換",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                    "key_code": "caps_lock"
+                    },
+                    "to": [
+                    {
+                        "repeat": true,
+                        "key_code": "left_control",
+                        "lazy": false
+                    }
+                    ]
+                }
+            ]
+        },
+        {
+            "description": "caps_lock+shiftでコントール＋shift",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                    "key_code": "caps_lock",
+                    "modifiers": {
+                            "mandatory": [
+                                "left_shift"
+                            ],
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [
+                    {
+                        "repeat": true,
+                        "key_code": "left_control",
+                        "modifiers": [
+                            "left_shift"
+                        ]
+                    }
+                    ]
+                }
+            ]
+        },
+        {
+            "description": "caps_lock+optionでコントール＋option",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                    "key_code": "caps_lock",
+                    "modifiers": {
+                            "mandatory": [
+                                "left_alt"
+                            ],
+                            "optional": ["any"]
+                        }
+                    },
+                    "to": [
+                    {
+                        "repeat": true,
+                        "key_code": "left_control",
+                        "modifiers": [
+                            "left_alt"
+                        ]
+                    }
+                    ]
+                }
+            ]
+        },
+        {
+            "description": "コントロール＋kで上矢印",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                    "key_code": "k",
+                        "modifiers": {
+                            "mandatory": [ "control" ],
+                            "optional": ["any"]
+                            },
+                        "simultaneous_options": {
+                            "key_down_order": "strict_inverse"
+                            }
+                    },
+                    "to": [
+                        {"key_code": "up_arrow"}
+                    ]
+                }
+            ]
+        },
+        {
+            "description": "コントロール＋hで左矢印",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                    "key_code": "h",
+                        "modifiers": {
+                            "mandatory": [ "control" ],
+                            "optional": ["any"]
+                            },
+                        "simultaneous_options": {
+                            "key_down_order": "strict_inverse"
+                            }
+                    },
+                    "to": [
+                        {"key_code": "left_arrow"}
+                    ]
+                }
+            ]
+        },
+        {
+            "description": "コントロール＋jで下矢印",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "j",
+                        "modifiers": {
+                            "mandatory": [ "control" ],
+                            "optional": ["any"]
+                            },
+                        "simultaneous_options": {
+                            "key_down_order": "strict_inverse"
+                            }
+                    },
+                    "to": [
+                        {"key_code": "down_arrow"}
+                    ]
+                }
+            ]
+        },
+        {
+            "description": "コントロール＋lで右矢印",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "l",
+                        "modifiers": {
+                            "mandatory": [ "control" ],
+                            "optional": ["any"]
+                            },
+                        "simultaneous_options": {
+                            "key_down_order": "strict_inverse"
+                            }
+                    },
+                    "to": [
+                        {"key_code": "right_arrow"}
+                    ]
+                }
+            ]
+        },
+        {
+            "description": "コントロール＋uでページアップ",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "u",
+                        "modifiers": {
+                            "mandatory": [ "control" ]
+                            },
+                        "simultaneous_options": {
+                            "key_down_order": "strict_inverse"
+                            }
+                    },
+                    "to": [
+                        {
+                            "key_code": "up_arrow",
+                            "modifiers": [
+                                "fn"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "description": "コントロール＋iでページダウン",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "i",
+                        "modifiers": {
+                            "mandatory": [ "control" ]
+                            },
+                        "simultaneous_options": {
+                            "key_down_order": "strict_inverse"
+                            }
+                    },
+                    "to": [
+                        {
+                            "key_code": "down_arrow",
+                            "modifiers": [
+                                "fn"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "description": "コントロール＋tでHome",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "t",
+                        "modifiers": {
+                            "mandatory": [ "control" ]
+                            },
+                        "simultaneous_options": {
+                            "key_down_order": "strict_inverse"
+                            }
+                    },
+                    "to": [
+                        {
+                            "key_code": "left_arrow",
+                            "modifiers": [
+                                "fn"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "description": "コントロール＋yでEnd",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "y",
+                        "modifiers": {
+                            "mandatory": [ "control" ]
+                            },
+                        "simultaneous_options": {
+                            "key_down_order": "strict_inverse"
+                            }
+                    },
+                    "to": [
+                        {
+                            "key_code": "right_arrow",
+                            "modifiers": [
+                                "fn"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "description": "コントロール＋nでコントール＋kの機能（後ろの文字全カット＋カタカナに変換）",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "n",
+                        "modifiers": {
+                            "mandatory": [ "control" ]
+                            },
+                        "simultaneous_options": {
+                            "key_down_order": "strict_inverse"
+                            }
+                    },
+                    "to": [
+                        {
+                            "key_code": "k",
+                            "modifiers": [
+                                "control"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "description": "コントロール＋mでコントール＋jの機能（ひらがなへ変換）",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "m",
+                        "modifiers": {
+                            "mandatory": [ "control" ]
+                            },
+                        "simultaneous_options": {
+                            "key_down_order": "strict_inverse"
+                            }
+                    },
+                    "to": [
+                        {
+                            "key_code": "j",
+                            "modifiers": [
+                                "control"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "description": "コントロール＋wで単語単位でdelete(option + delete)",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "w",
+                        "modifiers": {
+                            "mandatory": [ "control" ]
+                            },
+                        "simultaneous_options": {
+                            "key_down_order": "strict_inverse"
+                            }
+                    },
+                    "to": [
+                        {
+                            "key_code": "delete_or_backspace",
+                            "modifiers": [
+                                "left_alt"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "description": "コントロール＋fで単語単位で右移動(option + 右矢印)",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "f",
+                        "modifiers": {
+                            "mandatory": [ "control" ],
+                            "optional": ["any"]
+                            },
+                        "simultaneous_options": {
+                            "key_down_order": "strict_inverse"
+                            }
+                    },
+                    "to": [
+                        {
+                            "key_code": "right_arrow",
+                            "modifiers": [
+                                "left_alt"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "description": "コントロール＋bで単語単位で左移動(option + 左矢印)",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "b",
+                        "modifiers": {
+                            "mandatory": [ "control" ],
+                            "optional": ["any"]
+                            },
+                        "simultaneous_options": {
+                            "key_down_order": "strict_inverse"
+                            }
+                    },
+                    "to": [
+                        {
+                            "key_code": "left_arrow",
+                            "modifiers": [
+                                "left_alt"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "description": "コントロール＋右コマンドでdelete",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "right_command",
+                        "modifiers": {
+                            "mandatory": [ "control" ],
+                            "optional": ["any"]
+                            },
+                        "simultaneous_options": {
+                            "key_down_order": "strict_inverse"
+                            }
+                    },
+                    "to": [
+                        {
+                            "key_code": "delete_or_backspace"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "description": "コントロール＋oで末尾移動&#改行",
+            "manipulators": [
+                {
+                    "from": {
+                    "key_code": "o",
+                    "modifiers": {
+                        "mandatory": ["left_control"],
+                        "optional": ["any"]
+                    }
+                    },
+                    "to": [
+                    {
+                        "key_code": "e",
+                        "modifiers": ["left_control"]
+                    },
+                    {
+                        "key_code": "return_or_enter"
+                    }
+                    ],
+                    "type": "basic"
+                }
+            ]
+        },
+        {
+            "description": "コントロール＋bで単語単位で左移動(option + 左矢印)",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "b",
+                        "modifiers": {
+                            "mandatory": [ "control" ],
+                            "optional": ["any"]
+                            },
+                        "simultaneous_options": {
+                            "key_down_order": "strict_inverse"
+                            }
+                    },
+                    "to": [
+                        {
+                            "key_code": "left_arrow",
+                            "modifiers": [
+                                "left_alt"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

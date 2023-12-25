@@ -22,7 +22,7 @@ git clone --recursive git@github.com:fuller-inc/dotfiles.git
 クローンしたら、レポジトリ内で次のようにコマンドを実行します。
 
 ```
-./install.sh
+ROLE=base ./install.sh
 ```
 
 ## 各role毎にインストールされるソフトウェア

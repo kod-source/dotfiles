@@ -20,3 +20,7 @@ template "#{ENV['HOME']}/.zshrc" do
   source "templates/zshrc.sh"
   variables(homebrew_bin: homebrew_bin)
 end
+
+template "#{ENV['HOME']}/.alias.zsh" do
+  source "templates/.alias.zh"
+end
