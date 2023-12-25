@@ -1,10 +1,10 @@
 darwin_app 'visual-studio-code'
 
-template "#{ENV['HOME']}/Library/Application\ Support/Code/user/settings.json" do
+template "#{ENV['HOME']}/Library/Application Support/Code/User/settings.json" do
   source "templates/settings.json"
 end
 
-template "#{ENV['HOME']}/Library/Application\ Support/Code/user/keybindings.json" do
+template "#{ENV['HOME']}/Library/Application Support/Code/User/keybindings.json" do
   source "templates/keybindings.json"
 end
 
