@@ -1,5 +1,14 @@
 darwin_app 'visual-studio-code'
 
+execute "create supoort folder" do
+  command <<-EOC
+    if [ ! -d "#{ENV['HOME']}/Library/Application Support/Code/User" ]; then
+        mkdir -p "#{ENV['HOME']}/Library/Application\ Support/Code/User"
+    fi
+  EOC
+end
+
+
 template "#{ENV['HOME']}/Library/Application Support/Code/User/settings.json" do
   source "templates/settings.json"
 end
