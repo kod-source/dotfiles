@@ -54,12 +54,5 @@ mitamae_setup() {
 	fi
 }
 
-create_conifg() {
-	if [ ! -d "$HOME/.config" ]; then
-        mkdir -p "$HOME/.config"
-    fi
-}
-
-create_conifg
 xcode_setup
 mitamae_setup
