@@ -60,6 +60,6 @@ create_conifg() {
     fi
 }
 
+create_conifg
 xcode_setup
 mitamae_setup
-create_conifg
