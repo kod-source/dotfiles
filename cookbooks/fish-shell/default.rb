@@ -16,7 +16,13 @@ end
 Dir.glob(File.expand_path('../templates/**/*', __FILE__)).each do |template_file|
     next if File.directory?(template_file)
 
-    link File.join(ENV['HOME'], '.config', 'fish', template_file.gsub(File.expand_path('../templates', __FILE__), '')) do
+    target_file = File.join(ENV['HOME'], '.config', 'fish', template_file.gsub(File.expand_path('../templates', __FILE__), ''))
+
+    directory File.dirname(target_file) do
+        recursive true
+    end
+
+    link target_file do
         to template_file
         force true
     end
