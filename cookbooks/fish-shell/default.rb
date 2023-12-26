@@ -21,6 +21,21 @@ execute 'curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/
     not_if "test -f #{ENV['HOME']}/.config/fish/functions/fisher.fish"
 end
 
+[
+    'jethrokuan/z',
+    'ryotako/fish-global-abbreviation',
+    'takashabe/fish-peco',
+    'oh-my-fish/theme-bobthefish',
+    'oh-my-fish/plugin-peco',
+    '0rax/fish-bd',
+    'jethrokuan/fzf',
+].each do |pkg|
+    execute "Fisher Install #{pkg}" do
+        command "fish -c 'fisher install #{pkg}'"
+        not_if "fish -c 'fisher list | grep -q #{pkg}'"
+    end
+end
+
 Dir.glob(File.expand_path('../templates/**/*', __FILE__)).each do |template_file|
     next if File.directory?(template_file)
 
