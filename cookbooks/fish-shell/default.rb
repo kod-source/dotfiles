@@ -48,3 +48,8 @@ Dir.glob(File.expand_path('../templates/**/*', __FILE__)).each do |template_file
         force true
     end
 end
+
+link File.expand_path("#{ENV['HOME']}/.config/fish/.gabbr.config") do
+    to File.expand_path('../templates/.gabbr.config', __FILE__)
+    force true
+end
