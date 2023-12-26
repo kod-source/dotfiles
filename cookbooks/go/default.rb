@@ -18,8 +18,9 @@ package 'go'
     'go.uber.org/mock/mockgen@latest',
     'golang.org/x/vuln/cmd/govulncheck@latest'
 ].each do |pkg|
+    pkg_name = pkg.split('/').last.split('@').first
     execute "Install #{pkg}" do
         command "go install #{pkg}"
-        not_if "go list #{pkg}"
+        not_if "ls -l $(go env GOPATH)/bin | grep #{pkg_name}"
     end
 end
