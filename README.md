@@ -4,7 +4,6 @@
 
 ## 使い方
 
-2021年2月2日現在、**MacにはGitが標準でインストールされていません**。
 Xcode Command Line Toolsなど任意の方法でGitをインストールしてください。
 
 ```
@@ -12,8 +11,6 @@ xcode-select --install
 ```
 
 任意の場所にこのレポジトリをクローンします。
-必ず `--recursive` オプションを指定してクローンしてください。
-一部レシピが上手く実行できない場合があります
 
 ```
 git clone https://github.com/kod-source/dotfiles_new.git
