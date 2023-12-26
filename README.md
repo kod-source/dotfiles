@@ -13,7 +13,11 @@ xcode-select --install
 
 任意の場所にこのレポジトリをクローンします。
 必ず `--recursive` オプションを指定してクローンしてください。
-一部レシピが上手く実行できない場合があります([#8](https://github.com/fuller-inc/dotfiles/issues/8))。
+一部レシピが上手く実行できない場合があります
+
+```
+git clone --recursive https://github.com/kod-source/dotfiles_new.git
+```
 
 ```
 git clone --recursive git@github.com:fuller-inc/dotfiles.git
@@ -24,36 +28,6 @@ git clone --recursive git@github.com:fuller-inc/dotfiles.git
 ```
 ROLE=base ./install.sh
 ```
-
-## 各role毎にインストールされるソフトウェア
-
-### 共通
-
-- [Homebrew](https://brew.sh/index)
-- [jq](https://stedolan.github.io/jq/)
-- [peco](https://github.com/peco/peco)
-- [ghq](https://github.com/x-motemen/ghq)
-- tree
-- [tmux](https://github.com/tmux/tmux)
-- [iTerm2](https://iterm2.com)
-- [Figma](https://www.figma.com)
-- [Visual Studio Code](https://code.visualstudio.com)
-- [Go](https://golang.org)
-- [AWS CLI](https://aws.amazon.com/jp/cli/)
-- [mkr](https://github.com/mackerelio/mkr)
-- [Docker Desktop](https://www.docker.com/products/docker-desktop)
-- [ecspresso](https://github.com/kayac/ecspresso)
-- [gibo](https://github.com/simonwhitaker/gibo)
-- [Git](https://git-scm.com)
-- [Git Large File Storage](https://git-lfs.github.com)
-- [rbenv](https://github.com/rbenv/rbenv)
-- Rosetta 2
-
-### Android
-
-- [Android Studio](https://developer.android.com/studio?hl=ja)
-
-
 
 ## レシピの追加方法
 

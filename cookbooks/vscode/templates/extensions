@@ -2,6 +2,7 @@
 4ops.terraform
 amazonwebservices.aws-toolkit-vscode
 Arjun.swagger-viewer
+aws-scripting-guy.cform
 bierner.markdown-mermaid
 bradlc.vscode-tailwindcss
 bung87.vscode-gemfile
@@ -10,6 +11,8 @@ cocopon.iceberg-theme
 codezombiech.gitignore
 CoenraadS.bracket-pair-colorizer-2
 csstools.postcss
+cweijan.dbclient-jdbc
+cweijan.vscode-database-client2
 DanielSanMedium.dscodegpt
 dbaeumer.vscode-eslint
 donjayamanne.githistory
@@ -20,13 +23,16 @@ EditorConfig.EditorConfig
 esbenp.prettier-vscode
 gencay.vscode-chatgpt
 GitHub.copilot
+GitHub.copilot-chat
 github.vscode-github-actions
 GitHub.vscode-pull-request-github
 golang.go
+Gruntfuggly.todo-tree
 hashicorp.terraform
 hediet.vscode-drawio
 Hridoy.rails-snippets
 kddejong.vscode-cfn-lint
+mechatroner.rainbow-csv
 mgmcdermott.vscode-language-babel
 mikestead.dotenv
 mosapride.zenkaku
@@ -59,6 +65,5 @@ streetsidesoftware.code-spell-checker
 timonwong.shellcheck
 vscodevim.vim
 wingrunr21.vscode-ruby
-withfig.fig
 wix.vscode-import-cost
 xabikos.JavaScriptSnippets
