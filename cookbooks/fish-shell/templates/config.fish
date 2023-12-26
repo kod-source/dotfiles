@@ -150,4 +150,26 @@ if [ -f '/Users/horikoudai/Downloads/google-cloud-sdk/path.fish.inc' ]; . '/User
 
 eval (nodenv init - | source)
 
+# 展開エイリアスの設定
 abbr -a sr 'exec $SHELL -l'
+
+# by @GReagle@github
+# https://github.com/fish-shell/fish-shell/issues/1963#issuecomment-93775067
+function bind_global_alias
+        switch (commandline -t)
+  case "l"
+    commandline -rt '| less '
+  case "h"
+    commandline -rt '| head '
+  case "t"
+    commandline -rt '| tail '
+  case "g"
+    commandline -rt '| grep '
+  case "w"
+    commandline -rt '| wc '
+  case "cc"
+    commandline -rt '| ccze -A '
+  end
+end
+
+bind \cx bind_global_alias
