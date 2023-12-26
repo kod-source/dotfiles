@@ -149,3 +149,5 @@ gabbr --reload
 if [ -f '/Users/horikoudai/Downloads/google-cloud-sdk/path.fish.inc' ]; . '/Users/horikoudai/Downloads/google-cloud-sdk/path.fish.inc'; end
 
 eval (nodenv init - | source)
+
+abbr -a sr 'exec $SHELL -l'

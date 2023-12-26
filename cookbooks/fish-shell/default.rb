@@ -23,12 +23,16 @@ end
 
 [
     'jethrokuan/z',
-    'ryotako/fish-global-abbreviation',
     'takashabe/fish-peco',
     'oh-my-fish/theme-bobthefish',
     'oh-my-fish/plugin-peco',
     '0rax/fish-bd',
     'jethrokuan/fzf',
+    'oh-my-fish/plugin-balias',
+    'oh-my-fish/plugin-expand',
+    'jorgebucaran/fish-bax',
+    'edc/bass',
+    'sijad/gitignore',
 ].each do |pkg|
     execute "Fisher Install #{pkg}" do
         command "fish -c 'fisher install #{pkg}'"
