@@ -18,8 +18,9 @@ Dir.glob(File.expand_path('../templates/**/*', __FILE__)).each do |template_file
 
     target_file = File.join(ENV['HOME'], '.config', 'fish', template_file.gsub(File.expand_path('../templates', __FILE__), ''))
 
+    # target_fileが存在しない場合は作成する
     directory File.dirname(target_file) do
-        recursive true
+        not_if File.exists?(target_file)
     end
 
     link target_file do
