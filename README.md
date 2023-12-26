@@ -13,7 +13,7 @@ xcode-select --install
 任意の場所にこのレポジトリをクローンします。
 
 ```
-git clone https://github.com/kod-source/dotfiles_new.git
+git clone https://github.com/kod-source/dotfiles.git
 ```
 
 クローンしたら、レポジトリ内で次のようにコマンドを実行します。
