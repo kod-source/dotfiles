@@ -21,6 +21,6 @@ package 'go'
     pkg_name = pkg.split('/').last.split('@').first
     execute "Install #{pkg}" do
         command "go install #{pkg}"
-        not_if "ls -l $(go env GOPATH)/bin | grep #{pkg_name}"
+        not_if "ls -l $(go env GOPATH)/bin | grep -q #{pkg_name}"
     end
 end

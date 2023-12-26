@@ -6,5 +6,5 @@ execute 'install ruby' do
     rbenv install #{version}
     rbenv global #{version}
   EOC
-  not_if "rbenv versions | grep #{version}"
+  not_if "rbenv versions | grep -q #{version}"
 end

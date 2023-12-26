@@ -6,5 +6,5 @@ execute 'install node' do
         nodenv install #{version}
         nodenv global #{version}
     EOC
-    not_if "nodenv versions | grep #{version}"
+    not_if "nodenv versions | grep -q #{version}"
 end

@@ -1,4 +1,4 @@
-# darwin_app 'karabiner-elements'
+darwin_app 'karabiner-elements'
 
 execute "create folder" do
     command <<-EOC
