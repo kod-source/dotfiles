@@ -2,7 +2,7 @@
 
 開発環境をセットアップする [mitamae](https://github.com/itamae-kitchen/mitamae) レシピです。
 
-## 使い方
+## 使用方法
 
 Xcode Command Line Toolsなど任意の方法でGitをインストールしてください。
 
@@ -16,25 +16,8 @@ xcode-select --install
 git clone https://github.com/kod-source/dotfiles_new.git
 ```
 
-```
-git clone git@github.com:fuller-inc/dotfiles.git
-```
-
 クローンしたら、レポジトリ内で次のようにコマンドを実行します。
 
 ```
-ROLE=base ./install.sh
+make install
 ```
-
-## レシピの追加方法
-
-### 新しいroleを追加したい場合
-
-1. `role` ディレクトリ配下に、任意の名前のディレクトリを作成します。作成したディレクトリ名が `role` になります
-1. 作成したディレクトリ配下に `default.rb` を作成します
-1. `default.rb` に、そのroleでインストールするソフトウェア群を列挙します
-
-### インストールするソフトウェアを追加する場合
-
-`cookbooks` ディレクトリ配下に、ソフトウェアをインストールするためのレシピを追加します。
-レシピは `<インストールするソフトウェア>/default.rb` の形式をとり、 `default.rb` にレシピを記述してください。
