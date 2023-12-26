@@ -8,6 +8,7 @@ execute "create gh folder" do
     EOC
 end
 
-template "#{ENV['HOME']}/.config/gh/config.yml" do
-    source "templates/config.yml"
+link File.expand_path("#{ENV['HOME']}/.config/gh/config.yml") do
+    to File.expand_path('../templates/config.yml', __FILE__)
+    force true
 end

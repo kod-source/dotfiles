@@ -10,4 +10,3 @@ tap 'homebrew/bundle'
 tap 'homebrew/cask-fonts'
 tap 'mykolaharmash/git-jump'
 tap 'hashicorp/tap'
-

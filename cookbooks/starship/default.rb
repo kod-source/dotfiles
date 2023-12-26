@@ -1,5 +1,6 @@
 package 'starship'
 
-template "#{ENV['HOME']}/.config/starship.toml" do
-    source "templates/starship.toml"
+link File.expand_path("#{ENV['HOME']}/.config/starship.toml") do
+    to File.expand_path('../templates/starship.toml', __FILE__)
+    force true
 end

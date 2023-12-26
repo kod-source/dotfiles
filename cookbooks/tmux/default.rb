@@ -1,5 +1,6 @@
 package 'tmux'
 
-template "#{ENV['HOME']}/.tmux.conf" do
-    source "templates/.tmux.conf"
+link File.expand_path("#{ENV['HOME']}/.tmux.conf") do
+    to File.expand_path('../templates/.tmux.conf', __FILE__)
+    force true
 end
