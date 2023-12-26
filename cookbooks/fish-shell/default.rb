@@ -1,6 +1,14 @@
 package 'fish'
 fish_path = '/opt/homebrew/bin/fish'
 
+execute "create folder" do
+    command <<-EOC
+        if [ ! -d ""#{ENV['HOME']}/.config/fish/conf.d"" ]; then
+            mkdir -p "#{ENV['HOME']}/.config/fish/conf.d"
+        fi
+    EOC
+end
+
 execute "echo #{fish_path} | sudo tee -a /etc/shells" do
     not_if "grep #{fish_path} /etc/shells"
 end

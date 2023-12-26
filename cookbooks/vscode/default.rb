@@ -1,4 +1,4 @@
-darwin_app 'visual-studio-code'
+# darwin_app 'visual-studio-code'
 
 execute "create supoort folder" do
   command <<-EOC
