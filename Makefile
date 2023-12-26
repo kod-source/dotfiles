@@ -25,3 +25,7 @@ install_app: ## 必要なデスクトップAppをインストールします。
 .PHONY: install_android
 install_android: ## AndroidSutioをインストールします。
 	ROLE=android ./install.sh
+
+.PHONY: mac
+mac: ## macの設定同期
+	./mac/setup.sh
