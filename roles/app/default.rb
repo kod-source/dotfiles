@@ -6,6 +6,7 @@ include_cookbook 'rectangle'
 include_cookbook 'vscode'
 include_cookbook 'karabiner'
 
+darwin_app 'fig'
 darwin_app 'figma'
 darwin_app 'docker'
 darwin_app '1password'
