@@ -13,7 +13,11 @@ xcode-select --install
 
 任意の場所にこのレポジトリをクローンします。
 必ず `--recursive` オプションを指定してクローンしてください。
-一部レシピが上手く実行できない場合があります([#8](https://github.com/fuller-inc/dotfiles/issues/8))。
+一部レシピが上手く実行できない場合があります
+
+```
+git clone --recursive https://github.com/kod-source/dotfiles_new.git
+```
 
 ```
 git clone --recursive git@github.com:fuller-inc/dotfiles.git

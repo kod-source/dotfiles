@@ -11,16 +11,17 @@ else
   raise ArgumentError, "unknown arch: #{node[:arch]}"
 end
 
-template "#{ENV['HOME']}/.zprofile" do
-  source "templates/zprofile.sh"
-  variables(homebrew_bin: homebrew_bin)
+link File.expand_path("#{ENV['HOME']}/.zprofile") do
+  to File.expand_path('../templates/zprofile.sh', __FILE__)
+  force true
 end
 
-template "#{ENV['HOME']}/.zshrc" do
-  source "templates/zshrc.sh"
-  variables(homebrew_bin: homebrew_bin)
+link File.expand_path("#{ENV['HOME']}/.zshrc") do
+  to File.expand_path('../templates/zshrc.sh', __FILE__)
+  force true
 end
 
-template "#{ENV['HOME']}/.alias.zsh" do
-  source "templates/.alias.sh"
+link File.expand_path("#{ENV['HOME']}/.alias.zsh") do
+  to File.expand_path('../templates/alias.sh', __FILE__)
+  force true
 end

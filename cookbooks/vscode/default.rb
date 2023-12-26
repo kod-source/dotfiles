@@ -8,13 +8,14 @@ execute "create supoort folder" do
   EOC
 end
 
-
-template "#{ENV['HOME']}/Library/Application Support/Code/User/settings.json" do
-  source "templates/settings.json"
+link File.expand_path("#{ENV['HOME']}/Library/Application Support/Code/User/settings.json") do
+  to File.expand_path('../templates/settings.json', __FILE__)
+  force true
 end
 
-template "#{ENV['HOME']}/Library/Application Support/Code/User/keybindings.json" do
-  source "templates/keybindings.json"
+link File.expand_path("#{ENV['HOME']}/Library/Application Support/Code/User/keybindings.json") do
+  to File.expand_path('../templates/keybindings.json', __FILE__)
+  force true
 end
 
 cookbook_dir = File.dirname(__FILE__)
