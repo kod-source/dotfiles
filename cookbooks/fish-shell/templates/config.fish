@@ -10,6 +10,7 @@ set PATH /usr/local/lib/ruby/gems/2.6.0/bin /usr/local/opt/ruby/bin $PATH
 set -U gabbr_config ~/.config/fish/.gabbr.config
 eval (direnv hook fish)
 pyenv init - | source
+status --is-interactive; and rbenv init - fish | source
 
 if status is-interactive
 # Commands to run in interactive sessions can go here

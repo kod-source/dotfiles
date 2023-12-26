@@ -1,12 +1,5 @@
-node.reverse_merge!(
-  rbenv: {
-    user: node[:user],
-    global: '3.2.0',
-    versions: %w('2.7.7' '3.2.0'),
-  }
-)
-
-include_recipe "rbenv::user"
+package "rbenv"
+version = '3.2.0'
 
 # rbenvの環境変数設定
 execute 'add rbenv path' do
@@ -16,4 +9,12 @@ execute 'add rbenv path' do
     echo 'export PATH="${RBENV_ROOT}/bin:${PATH}"' >> ~/.zshrc
     echo 'eval "$(rbenv init -)"' >> ~/.zshrc
   EOC
+end
+
+execute 'install ruby' do
+  command <<-EOC
+    rbenv install #{version}
+    rbenv global #{version}
+  EOC
+  not_if "rbenv versions | grep #{version}"
 end
