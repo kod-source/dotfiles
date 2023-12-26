@@ -16,11 +16,11 @@ xcode-select --install
 一部レシピが上手く実行できない場合があります
 
 ```
-git clone --recursive https://github.com/kod-source/dotfiles_new.git
+git clone https://github.com/kod-source/dotfiles_new.git
 ```
 
 ```
-git clone --recursive git@github.com:fuller-inc/dotfiles.git
+git clone git@github.com:fuller-inc/dotfiles.git
 ```
 
 クローンしたら、レポジトリ内で次のようにコマンドを実行します。

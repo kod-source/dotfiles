@@ -32,9 +32,7 @@
   "editor.inlineSuggest.enabled": true,
   "editor.unicodeHighlight.ambiguousCharacters": false,
   "editor.wordWrap": "on",
-  "eslint.workingDirectories": [
-    "functions"
-  ],
+  "eslint.workingDirectories": ["functions"],
   "explorer.confirmDelete": false,
   "files.autoSave": "afterDelay",
   "files.insertFinalNewline": true,

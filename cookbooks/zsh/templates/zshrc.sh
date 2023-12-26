@@ -221,3 +221,6 @@ alias -g PS='(ps -a | peco | sed -e "s/  */:/g" | sed -e "s/^://" | sed -e "s/:.
 
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
+export RBENV_ROOT=~/.rbenv
+export PATH="${RBENV_ROOT}/bin:${PATH}"
+eval "$(rbenv init -)"
