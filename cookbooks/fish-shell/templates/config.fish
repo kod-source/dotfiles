@@ -7,7 +7,6 @@ set -x PATH $HOME/.nodebrew/current/bin $PATH
 set -x PYENV_ROOT $HOME/.pyenv
 set -x PATH  $PYENV_ROOT/bin $PATH
 set PATH /usr/local/lib/ruby/gems/2.6.0/bin /usr/local/opt/ruby/bin $PATH
-set -U gabbr_config ~/.config/fish/.gabbr.config
 eval (direnv hook fish)
 pyenv init - | source
 status --is-interactive; and rbenv init - fish | source
@@ -46,9 +45,6 @@ function fish_user_key_bindings
   bind \cr 'peco_select_history (commandline -b)'
   bind \cg ghq_peco_repo
   bind \cl bind_global_alias
-  # gabbrを半角空白にキーバインド設定
-  bind ' ' '__gabbr_expand; commandline -i " "'
-  bind ';' '__gabbr_expand; commandline -i ";"'
 end
 
 if test -z $TMUX
@@ -142,10 +138,36 @@ function ided
   sh ~/dotfiles/scripts/ide.sh d
 end
 
-# gabbr reload（リロード処理を書かないと更新されない）
-gabbr --reload
-
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/horikoudai/Downloads/google-cloud-sdk/path.fish.inc' ]; . '/Users/horikoudai/Downloads/google-cloud-sdk/path.fish.inc'; end
 
 eval (nodenv init - | source)
+
+# 展開エイリアスの設定
+abbr -a sr 'exec $SHELL -l'
+abbr -a G ' grep'
+abbr -a L ' less'
+abbr -a B "git branch | peco | sed 's/^[ \*]*//'"
+abbr -a PS 'ps -a | peco | sed -e "s/  */:/g" | sed -e "s/^://" | sed -e "s/:.*//" | tr "\n" " "'
+
+
+# by @GReagle@github
+# https://github.com/fish-shell/fish-shell/issues/1963#issuecomment-93775067
+function bind_global_alias
+        switch (commandline -t)
+  case "l"
+    commandline -rt '| less '
+  case "h"
+    commandline -rt '| head '
+  case "t"
+    commandline -rt '| tail '
+  case "g"
+    commandline -rt '| grep '
+  case "w"
+    commandline -rt '| wc '
+  case "cc"
+    commandline -rt '| ccze -A '
+  end
+end
+
+bind \cx bind_global_alias
