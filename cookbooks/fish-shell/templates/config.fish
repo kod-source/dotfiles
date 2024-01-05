@@ -150,6 +150,30 @@ abbr -a L ' less'
 abbr -a B "git branch | peco | sed 's/^[ \*]*//'"
 abbr -a PS 'ps -a | peco | sed -e "s/  */:/g" | sed -e "s/^://" | sed -e "s/:.*//" | tr "\n" " "'
 
+## git
+abbr -a ga 'git add'
+abbr -a gl 'git log'
+abbr -a gpl 'git pull'
+abbr -a gc 'git checkout'
+abbr -a gb 'git branch'
+abbr -a gs 'git status'
+abbr -a gp 'git push'
+abbr -a gstl 'git stash list'
+abbr -a gsts 'git stash save'
+abbr -a gd 'git diff'
+abbr -a gds 'git diff --staged'
+abbr -a gfp 'git ls-files | peco | tr -d "\n" | pbcopy'
+abbr -a gj 'git jump'
+abbr -a gm 'gitmoji'
+abbr -a gmc 'gitmoji -c'
+
+## Linux
+abbr -a cl 'clear'
+
+# Fig
+abbr -a f 'fig'
+abbr -a fr 'fig run'
+
 
 # by @GReagle@github
 # https://github.com/fish-shell/fish-shell/issues/1963#issuecomment-93775067
