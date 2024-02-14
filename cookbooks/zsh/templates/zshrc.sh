@@ -5,21 +5,15 @@ if command -v direnv > /dev/null 2>&1; then
     eval "$(direnv hook zsh)"
 fi
 
-if command -v nodenv > /dev/null 2>&1; then
-    eval "$(nodenv init -)"
-fi
-
 if command -v plenv > /dev/null 2>&1; then
     eval "$(plenv init -)"
-fi
-
-if command -v rbenv > /dev/null 2>&1; then
-    eval "$(rbenv init -)"
 fi
 
 if command -v pyenv > /dev/null 2>&1; then
     eval "$(pyenv init --path)"
 fi
+
+. /opt/homebrew/opt/asdf/asdf.sh
 
 # Fig pre block. Keep at the top of this file.
 [[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"

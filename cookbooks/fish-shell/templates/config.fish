@@ -7,9 +7,10 @@ set -x PATH $HOME/.nodebrew/current/bin $PATH
 set -x PYENV_ROOT $HOME/.pyenv
 set -x PATH  $PYENV_ROOT/bin $PATH
 set PATH /usr/local/lib/ruby/gems/2.6.0/bin /usr/local/opt/ruby/bin $PATH
-eval (direnv hook fish)
 pyenv init - | source
 status --is-interactive; and rbenv init - fish | source
+# asdfの設定
+source /opt/homebrew/opt/asdf/libexec/asdf.fish
 
 if status is-interactive
 # Commands to run in interactive sessions can go here
@@ -140,8 +141,6 @@ end
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/horikoudai/Downloads/google-cloud-sdk/path.fish.inc' ]; . '/Users/horikoudai/Downloads/google-cloud-sdk/path.fish.inc'; end
-
-eval (nodenv init - | source)
 
 # 展開エイリアスの設定
 abbr -a sr 'exec $SHELL -l'
