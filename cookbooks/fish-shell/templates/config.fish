@@ -7,8 +7,6 @@ set -x PATH $HOME/.nodebrew/current/bin $PATH
 set -x PYENV_ROOT $HOME/.pyenv
 set -x PATH  $PYENV_ROOT/bin $PATH
 set PATH /usr/local/lib/ruby/gems/2.6.0/bin /usr/local/opt/ruby/bin $PATH
-pyenv init - | source
-status --is-interactive; and rbenv init - fish | source
 # asdfの設定
 source /opt/homebrew/opt/asdf/libexec/asdf.fish
 
