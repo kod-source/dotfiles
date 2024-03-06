@@ -13,7 +13,11 @@ if command -v pyenv > /dev/null 2>&1; then
     eval "$(pyenv init --path)"
 fi
 
-. /opt/homebrew/opt/asdf/asdf.sh
+. "$HOME/.asdf/asdf.sh"
+# append completions to fpath
+fpath=(${ASDF_DIR}/completions $fpath)
+# initialise completions with ZSH's compinit
+autoload -Uz compinit && compinit
 
 # Fig pre block. Keep at the top of this file.
 [[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
@@ -66,7 +70,7 @@ DIRSTACKSIZE=100
 setopt AUTO_PUSHD
 
 # git-promptの読み込み
-source ~/.zsh/git-prompt.sh
+# source ~/.zsh/git-prompt.sh
 
 # git-completionの読み込み
 fpath=(~/.zsh $fpath)
@@ -90,16 +94,16 @@ eval "$(direnv hook zsh)"
 # HSTR configuration - add this to ~/.bashrc
 alias hh=hstr                    # hh to be alias for hstr
 export HSTR_CONFIG=hicolor       # get more colors
-shopt -s histappend              # append new history items to .bash_history
+# shopt -s histappend              # append new history items to .bash_history
 export HISTCONTROL=ignorespace   # leading space hides commands from history
 export HISTFILESIZE=10000        # increase history file size (default is 500)
 export HISTSIZE=${HISTFILESIZE}  # increase history size (default is 500)
 # ensure synchronization between bash memory and history file
 export PROMPT_COMMAND="history -a; history -n; ${PROMPT_COMMAND}"
 # if this is interactive shell, then bind hstr to Ctrl-r (for Vi mode check doc)
-if [[ $- =~ .*i.* ]]; then bind '"\C-r": "\C-a hstr -- \C-j"'; fi
+# if [[ $- =~ .*i.* ]]; then bind '"\C-r": "\C-a hstr -- \C-j"'; fi
 # if this is interactive shell, then bind 'kill last command' to Ctrl-x k
-if [[ $- =~ .*i.* ]]; then bind '"\C-xk": "\C-a hstr -k \C-j"'; fi
+# if [[ $- =~ .*i.* ]]; then bind '"\C-xk": "\C-a hstr -k \C-j"'; fi
 
 . ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
@@ -215,6 +219,3 @@ alias -g PS='(ps -a | peco | sed -e "s/  */:/g" | sed -e "s/^://" | sed -e "s/:.
 
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
-export RBENV_ROOT=~/.rbenv
-export PATH="${RBENV_ROOT}/bin:${PATH}"
-eval "$(rbenv init -)"
