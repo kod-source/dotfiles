@@ -38,14 +38,7 @@ alias al="alias | peco | awk -F '=' '{print $1}' | tr -d '\n' | pbcopy"
 alias cdp='cd $(find . -maxdepth 3 -type d -not -path "*/\.git/*" | peco)'
 alias rmp='rm $(find . -maxdepth 3 -type f -not -path "*/\.git/*" | peco)'
 alias rmrp='rm -r $(find . -maxdepth 3 -type d -not -path "*/\.git/*" | peco)'
-alias cat="bat --style=plain"
-alias catp='bat --style=plain $(find . -maxdepth 3 -type f -not -path "*/\.git/*" | peco)'
 alias vip='vi $(find . -maxdepth 3 -type f -not -path "*/\.git/*" | peco)'
-alias ls='exa'
-alias l='exa -F'
-alias la='exa -la'
-alias ll='exa -l'
-alias lt='exa --icons -T -L 2 -a --git-ignore'
 
 # dokcer
 alias d='docker'

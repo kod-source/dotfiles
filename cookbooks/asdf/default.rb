@@ -1,6 +1,6 @@
 execute "install" do
     command <<-EOC
-        git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.13.1
+        git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.14.0
         mkdir -p ~/.config/fish/completions; and ln -s ~/.asdf/completions/asdf.fish ~/.config/fish/completions
     EOC
     not_if { ::File.exist?(File.expand_path("~/.asdf")) }
