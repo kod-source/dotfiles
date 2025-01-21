@@ -137,6 +137,8 @@ defaults -currentHost write -g com.apple.keyboard.modifiermapping.${keyboard_id}
 	        <integer>30064771129</integer>\
 		</dict>
   "
+# 全角数字入力を無効化
+defaults write com.apple.inputmethod.Kotoer JIMPrefFullWidthNumeralCharactersKey -int 0
 
 #
 # Security
@@ -159,3 +161,11 @@ networksetup -setdnsservers Wi-Fi 2001:4860:4860::8844 2001:4860:4860::8888 8.8.
 defaults write NSGlobalDomain NSAutomaticCapitalizationEnabled -bool "false"
 # 「前の入力ソースを選択」をオフにする
 defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 60 "<dict><key>enabled</key><false/><key>value</key><dict><key>parameters</key><array><integer>32</integer><integer>49</integer><integer>1048576</integer></array><key>type</key><string>standard</string></dict></dict>"
+## 時計を秒まで表示
+defaults write com.apple.menuextra.clock ShowSeconds -int 1
+## Vimの連続入力を有効にする
+defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
+defaults write -g ApplePressAndHoldEnabled -bool false
+
+# システムUIServerを再起動して設定を反映
+killall SystemUIServer
