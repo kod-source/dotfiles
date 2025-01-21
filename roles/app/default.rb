@@ -1,7 +1,7 @@
 include_role 'base'
 
 include_cookbook 'iterm2'
-# include_cookbook 'alfred'
+include_cookbook 'alfred'
 include_cookbook 'rectangle'
 include_cookbook 'vscode'
 include_cookbook 'karabiner'
