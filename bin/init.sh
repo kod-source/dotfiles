@@ -60,6 +60,6 @@ mitamae_setup() {
 	fi
 }
 
-create-file
+create_file
 xcode_setup
 mitamae_setup
