@@ -34,6 +34,7 @@ if ENV['GITHUB_ACTIONS'] != 'true'
         EOC
     end
 end
+
 File.open("#{ENV['HOME']}/.tool-versions") do |file|
     file.each_line do |line|
         pkg, version = line.split
