@@ -14,11 +14,10 @@ if command -v pyenv > /dev/null 2>&1; then
 fi
 
 . "$HOME/.asdf/asdf.sh"
-plugins=(asdf)
 # append completions to fpath
 fpath=(${ASDF_DIR}/completions $fpath)
 # initialise completions with ZSH's compinit
-autoload -Uz compinit && compinit
+# autoload -Uz compinit && compinit
 
 # Fig pre block. Keep at the top of this file.
 [[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
@@ -36,47 +35,47 @@ HISTSIZE=50000
 SAVEHIST=50000
 
 # 直前のコマンドの重複を削除
-setopt hist_ignore_dups
+# setopt hist_ignore_dups
 
 # 同じコマンドをヒストリに残さない
-setopt hist_ignore_all_dups
+# setopt hist_ignore_all_dups
 
 # 同時に起動したzshの間でヒストリを共有
-setopt share_history
+# setopt share_history
 
 # 補完機能を有効にする
-autoload -Uz compinit
+# autoload -Uz compinit
 compinit -u
 if [ -e /usr/local/share/zsh-completions ]; then
   fpath=(/usr/local/share/zsh-completions $fpath)
 fi
 
 # 補完で小文字でも大文字にマッチさせる
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+# zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
 # 補完候補を詰めて表示
-setopt list_packed
+# setopt list_packed
 
 # 補完候補一覧をカラー表示
-autoload colors
-zstyle ':completion:*' list-colors ''
+# autoload colors
+# zstyle ':completion:*' list-colors ''
 
 # コマンドのスペルを訂正
-setopt correct
+# setopt correct
 # ビープ音を鳴らさない
-setopt no_beep
+# setopt no_beep
 
 # ディレクトリスタック
 DIRSTACKSIZE=100
-setopt AUTO_PUSHD
+# setopt AUTO_PUSHD
 
 # git-promptの読み込み
 # source ~/.zsh/git-prompt.sh
 
 # git-completionの読み込み
 fpath=(~/.zsh $fpath)
-zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.bash
-autoload -Uz compinit && compinit
+# zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.bash
+# autoload -Uz compinit && compinit
 
 # プロンプトのオプション表示設定
 GIT_PS1_SHOWDIRTYSTATE=true
@@ -85,8 +84,8 @@ GIT_PS1_SHOWSTASHSTATE=true
 GIT_PS1_SHOWUPSTREAM=auto
 
 # プロンプトの表示設定(好きなようにカスタマイズ可)
-setopt PROMPT_SUBST ; PS1='%F{green}%n@%m%f: %F{cyan}%~%f %F{red}$(__git_ps1 "(%s)")%f
-\$ '
+# setopt PROMPT_SUBST ; PS1='%F{green}%n@%m%f: %F{cyan}%~%f %F{red}$(__git_ps1 "(%s)")%f
+# \$ '
 
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
@@ -105,8 +104,6 @@ export PROMPT_COMMAND="history -a; history -n; ${PROMPT_COMMAND}"
 # if [[ $- =~ .*i.* ]]; then bind '"\C-r": "\C-a hstr -- \C-j"'; fi
 # if this is interactive shell, then bind 'kill last command' to Ctrl-x k
 # if [[ $- =~ .*i.* ]]; then bind '"\C-xk": "\C-a hstr -k \C-j"'; fi
-
-. ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 [ -f ~/.alias.zsh ] && source ~/.alias.zsh
 
