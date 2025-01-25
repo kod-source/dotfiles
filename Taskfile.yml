@@ -1,0 +1,45 @@
+version: '3'
+
+silent: true
+
+tasks:
+  default:
+    aliases:
+      - list
+    desc: List all tasks
+    cmd: task -l --sort none
+
+  install:
+    desc: パッケージをインストールします。
+    cmds:
+      - ROLE=all ./install.sh
+
+  install_base:
+    desc: ベースパッケージをインストールします。
+    cmds:
+      - ROLE=base ./install.sh
+
+  install_cookbooks:
+    desc: クックブックのパッケージをインストールします。
+    cmds:
+      - ROLE=cookbooks ./install.sh
+
+  install_packages:
+    desc: brewパッケージをインストールします。
+    cmds:
+      - ROLE=packages ./install.sh
+
+  install_app:
+    desc: 必要なデスクトップAppをインストールします。
+    cmds:
+      - ROLE=app ./install.sh
+
+  install_android:
+    desc: AndroidStudioをインストールします。
+    cmds:
+      - ROLE=android ./install.sh
+
+  mac:
+    desc: macの設定同期
+    cmds:
+      - ./mac/setup.sh

@@ -1,7 +1,8 @@
 execute "install" do
     command <<-EOC
         git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.14.0
-        mkdir -p ~/.config/fish/completions; and ln -s ~/.asdf/completions/asdf.fish ~/.config/fish/completions
+        mkdir -p ~/.config/fish/completions; ln -s ~/.asdf/completions/asdf.fish ~/.config/fish/completions
+        echo '. "$HOME/.asdf/asdf.sh"' >> ~/.zshrc
     EOC
     not_if { ::File.exist?(File.expand_path("~/.asdf")) }
 end
@@ -14,7 +15,8 @@ end
 [
     'ruby https://github.com/asdf-vm/asdf-ruby.git',
     'golang https://github.com/asdf-community/asdf-golang.git',
-    'nodejs https://github.com/asdf-vm/asdf-nodejs.git'
+    'nodejs https://github.com/asdf-vm/asdf-nodejs.git',
+    'pnpm https://github.com/jonathanmorley/asdf-pnpm'
 ].each do |pkg|
     name, url = pkg.split
     execute "asdf plugin add #{name}" do

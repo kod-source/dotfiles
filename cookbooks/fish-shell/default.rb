@@ -13,8 +13,10 @@ execute "echo #{fish_path} | sudo tee -a /etc/shells" do
     not_if "grep #{fish_path} /etc/shells"
 end
 
-execute "chsh -s #{fish_path}" do
-    not_if { `dscl localhost -read Local/Default/Users/#{node[:user]} UserShell`.include?(fish_path) }
+if ENV['GITHUB_ACTIONS'] != 'true'
+    execute "chsh -s #{fish_path}" do
+        not_if { `dscl localhost -read Local/Default/Users/#{node[:user]} UserShell`.include?(fish_path) }
+    end
 end
 
 execute 'curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish' do

@@ -1,6 +1,12 @@
 #!/bin/sh
 set -u
 
+create_file() {
+    if [ ! -f ~/.tool-versions ]; then
+        touch ~/.tool-versions
+    fi
+}
+
 xcode_setup() {
 	if [ "$(uname)" = 'Darwin' ]; then
 		xcode-select -p
@@ -54,5 +60,6 @@ mitamae_setup() {
 	fi
 }
 
+create_file
 xcode_setup
 mitamae_setup
