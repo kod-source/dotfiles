@@ -2,8 +2,8 @@
 set -u
 
 create_file() {
-    if [ ! -f ~/.tool_versions ]; then
-        touch ~/.tool_versions
+    if [ ! -f ~/.tool-versions ]; then
+        touch ~/.tool-versions
     fi
 }
 
