@@ -4,7 +4,7 @@ execute "install" do
         mkdir -p ~/.config/fish/completions; ln -s ~/.asdf/completions/asdf.fish ~/.config/fish/completions
         echo '. $HOME/.asdf/asdf.sh' >> ~/.bashrc
         echo '. $HOME/.asdf/completions/asdf.bash' >> ~/.bashrc
-        sh . ~/.asdf/asdf.sh
+        sh ~/.asdf/asdf.sh
     EOC
     not_if { ::File.exist?(File.expand_path("~/.asdf")) }
 end
@@ -40,4 +40,3 @@ File.open("#{ENV['HOME']}/.tool-versions") do |file|
         end
     end
 end
-
