@@ -14,6 +14,7 @@ if command -v pyenv > /dev/null 2>&1; then
 fi
 
 . "$HOME/.asdf/asdf.sh"
+plugins=(asdf)
 # append completions to fpath
 fpath=(${ASDF_DIR}/completions $fpath)
 # initialise completions with ZSH's compinit
