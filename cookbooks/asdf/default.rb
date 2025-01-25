@@ -3,8 +3,9 @@ execute "install" do
         git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.14.0
         mkdir -p ~/.config/fish/completions; ln -s ~/.asdf/completions/asdf.fish ~/.config/fish/completions
         echo '. $HOME/.asdf/asdf.sh' >> ~/.bashrc
-        echo '. $HOME/.asdf/completions/asdf.bash' >> ~/.bashrc
-        sh ~/.asdf/asdf.sh
+        echo '. $HOME/.asdf/asdf.completions/asdf.bash' >> ~/.bashrc
+        # 環境変数を設定するためにbashrcを再読み込みする
+        source ~/.bashrc
     EOC
     not_if { ::File.exist?(File.expand_path("~/.asdf")) }
 end
