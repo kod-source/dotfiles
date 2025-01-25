@@ -17,7 +17,12 @@ jobs:
             # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
             - uses: actions/checkout@v2
             # Runs a single command using the runners shell
+            - name: Install Task
+              uses: arduino/setup-task@v2
+              with:
+                version: 3.x
+            # Runs a single command using the runners shell
             - name: Set MacOS.
-              run: make install
+              run: task install
             - name: Set Up Mac Settings.
-              run: make mac
+              run: task mac
