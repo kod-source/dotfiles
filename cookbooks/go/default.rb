@@ -5,7 +5,7 @@ package 'go'
     'golang.org/x/tools/cmd/godoc@latest',
     'golang.org/x/tools/cmd/goimports@latest',
     'golang.org/x/tools/gopls@latest',
-    'github.com/air-verse/air@latest'
+    'github.com/air-verse/air@latest',
     'github.com/schemalex/git-schemalex/cmd/git-schemalex@latest',
     'github.com/shogo82148/goa-v1/...@v1',
     'goa.design/goa/v3/cmd/goa@v3',
