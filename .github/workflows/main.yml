@@ -22,6 +22,8 @@ jobs:
               with:
                 version: 3.x
                 repo-token: ${{ secrets.GITHUB_TOKEN }}
+            - name: Install asdf & tools
+              uses: asdf-vm/actions/install@v3
             # Runs a single command using the runners shell
             - name: Set MacOS.
               run: task install

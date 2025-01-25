@@ -14,7 +14,7 @@ link File.expand_path("#{ENV['HOME']}/.tool-versions") do
     force true
 end
 
-if ENV['GITHUB_ACTIONS'] != 'true'
+# if ENV['GITHUB_ACTIONS'] != 'true'
     [
         'ruby https://github.com/asdf-vm/asdf-ruby.git',
         'golang https://github.com/asdf-community/asdf-golang.git',
@@ -33,7 +33,7 @@ if ENV['GITHUB_ACTIONS'] != 'true'
             asdf install
         EOC
     end
-end
+# end
 
 File.open("#{ENV['HOME']}/.tool-versions") do |file|
     file.each_line do |line|
