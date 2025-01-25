@@ -15,9 +15,9 @@ end
 
 if ENV['GITHUB_ACTIONS'] != 'true'
     execute "chsh -s #{fish_path}" do
-      not_if { `dscl localhost -read Local/Default/Users/#{node[:user]} UserShell`.include?(fish_path) }
+        not_if { `dscl localhost -read Local/Default/Users/#{node[:user]} UserShell`.include?(fish_path) }
     end
-  end
+end
 
 execute 'curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish' do
     not_if "test -f #{ENV['HOME']}/.config/fish/functions/fisher.fish"

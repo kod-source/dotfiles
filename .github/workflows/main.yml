@@ -1,18 +1,23 @@
 name: Dotfiles CI
 
 on:
-  push:
-    branches:
-      - main
-  pull_request:
+    push:
+        branches:
+        - main
+    pull_request:
+
+env:
+    GH_TOKEN: ${{ github.token }}
 
 jobs:
-  macOS:
-    runs-on: macos-latest
-    # Steps represent a sequence of tasks that will be executed as part of the job
-    steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
-      # Runs a single command using the runners shell
-      - name: Set MacOS.
-        run: make install
+    macOS:
+        runs-on: macos-latest
+        # Steps represent a sequence of tasks that will be executed as part of the job
+        steps:
+            # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+            - uses: actions/checkout@v2
+            # Runs a single command using the runners shell
+            - name: Set MacOS.
+              run: make install
+            - name: Set Up Mac Settings.
+              run: make mac
