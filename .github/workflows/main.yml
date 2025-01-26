@@ -25,5 +25,6 @@ jobs:
             # Runs a single command using the runners shell
             - name: Set MacOS.
               run: task install
+            - run: task install_android
             - name: Set Up Mac Settings.
               run: task mac
