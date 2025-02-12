@@ -16,7 +16,8 @@ end
     'ruby https://github.com/asdf-vm/asdf-ruby.git',
     'golang https://github.com/asdf-community/asdf-golang.git',
     'nodejs https://github.com/asdf-vm/asdf-nodejs.git',
-    'pnpm https://github.com/jonathanmorley/asdf-pnpm'
+    'pnpm https://github.com/jonathanmorley/asdf-pnpm',
+    'python https://github.com/danhper/asdf-python.git'
 ].each do |pkg|
     name, url = pkg.split
     execute "asdf plugin add #{name}" do
