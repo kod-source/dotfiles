@@ -99,25 +99,25 @@
       {
         "scope": "entity.name.tag.yaml",
         "settings": {
-          "foreground": "#569CD6" // キーの色
+          "foreground": "#569CD6"
         }
       },
       {
         "scope": "string.yaml",
         "settings": {
-          "foreground": "#CE9178" // 文字列の色
+          "foreground": "#CE9178"
         }
       },
       {
         "scope": "constant.numeric.yaml",
         "settings": {
-          "foreground": "#B5CEA8" // 数値の色
+          "foreground": "#B5CEA8"
         }
       },
       {
         "scope": "punctuation.definition.block.sequence.item.yaml",
         "settings": {
-          "foreground": "#C586C0" // リストマーカーの色
+          "foreground": "#C586C0"
         }
       }
     ]
