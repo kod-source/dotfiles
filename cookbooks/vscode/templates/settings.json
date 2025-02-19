@@ -8,7 +8,7 @@
   },
   "[terraform-vars]": {
     "editor.codeActionsOnSave": {
-      "source.formatAll.terraform": true
+      "source.formatAll.terraform": "explicit"
     },
     "editor.defaultFormatter": "hashicorp.terraform",
     "editor.formatOnSave": false
@@ -16,7 +16,7 @@
   "[terraform]": {
     "editofr.formatOnSave": true,
     "editor.codeActionsOnSave": {
-      "source.formatAll.terraform": true
+      "source.formatAll.terraform": "explicit"
     },
     "editor.defaultFormatter": "hashicorp.terraform"
   },
@@ -88,5 +88,6 @@
     "!Split",
     "!Split sequence"
   ],
-  "yaml.validate": false
+  "yaml.validate": false,
+  "database-client.autoSync": true
 }
