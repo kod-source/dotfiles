@@ -89,5 +89,36 @@
     "!Split sequence"
   ],
   "yaml.validate": false,
-  "database-client.autoSync": true
+  "database-client.autoSync": true,
+  "cursor.cpp.disabledLanguages": ["markdown", "plaintext", "scminput"],
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": "entity.name.tag.yaml",
+        "settings": {
+          "foreground": "#569CD6"
+        }
+      },
+      {
+        "scope": "string.yaml",
+        "settings": {
+          "foreground": "#CE9178"
+        }
+      },
+      {
+        "scope": "constant.numeric.yaml",
+        "settings": {
+          "foreground": "#B5CEA8"
+        }
+      },
+      {
+        "scope": "punctuation.definition.block.sequence.item.yaml",
+        "settings": {
+          "foreground": "#C586C0"
+        }
+      }
+    ]
+  },
+  "editor.guides.indentation": true,
+  "editor.renderIndentGuides": true
 }
