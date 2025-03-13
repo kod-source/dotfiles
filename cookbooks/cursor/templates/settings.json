@@ -122,6 +122,6 @@
   "editor.guides.indentation": true,
   "geminicodeassist.project": "quickstart-1720947991306",
   "search.mode": "reuseEditor",
-  "search.searchEditor.focusResultsOnSearch": true,
-  "search.searchOnType": false,
+  "search.searchEditor.focusResultsOnSearch": false,
+  "search.searchOnType": true
 }
