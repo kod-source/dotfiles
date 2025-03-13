@@ -56,5 +56,9 @@
   {
     "key": "shift+cmd+l",
     "command": "workbench.action.nextEditor"
+  },
+  {
+    "key": "shift+cmd+f",
+    "command": "search.action.openNewEditor"
   }
 ]
