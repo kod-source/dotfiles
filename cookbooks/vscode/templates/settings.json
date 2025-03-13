@@ -89,5 +89,8 @@
     "!Split sequence"
   ],
   "yaml.validate": false,
-  "database-client.autoSync": true
+  "database-client.autoSync": true,
+  "search.mode": "reuseEditor",
+  "search.searchEditor.focusResultsOnSearch": true,
+  "search.searchOnType": false
 }

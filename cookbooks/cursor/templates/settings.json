@@ -120,5 +120,8 @@
     ]
   },
   "editor.guides.indentation": true,
-  "editor.renderIndentGuides": true
+  "geminicodeassist.project": "quickstart-1720947991306",
+  "search.mode": "reuseEditor",
+  "search.searchEditor.focusResultsOnSearch": true,
+  "search.searchOnType": false,
 }
