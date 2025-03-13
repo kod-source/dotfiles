@@ -91,6 +91,6 @@
   "yaml.validate": false,
   "database-client.autoSync": true,
   "search.mode": "reuseEditor",
-  "search.searchEditor.focusResultsOnSearch": true,
-  "search.searchOnType": false
+  "search.searchEditor.focusResultsOnSearch": false,
+  "search.searchOnType": true
 }
