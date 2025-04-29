@@ -35,3 +35,23 @@ execute "Setup for zsh shell" do
   EOC
   only_if "test -d $HOME/google-cloud-sdk"
 end
+
+# GCPコンポーネントのインストール
+gcloud_components = [
+  'gke-gcloud-auth-plugin'
+]
+
+gcloud_components.each do |component|
+  execute "Install gcloud component: #{component}" do
+    command <<-EOC
+      export PATH="$HOME/google-cloud-sdk/bin:$PATH"
+      if "$HOME/google-cloud-sdk/bin/gcloud" components list --format='value(state)' --filter="id=#{component}" | grep -q "Not Installed"; then
+        yes | "$HOME/google-cloud-sdk/bin/gcloud" components install #{component}
+        echo "Installed gcloud component: #{component}"
+      else
+        echo "gcloud component #{component} is already installed"
+      fi
+    EOC
+    only_if "test -d $HOME/google-cloud-sdk/bin"
+  end
+end
